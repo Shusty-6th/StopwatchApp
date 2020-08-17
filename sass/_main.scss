@@ -2,7 +2,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     min-height: 100vh;
 
     background-color: rgb(70, 69, 69);
@@ -14,8 +13,7 @@ body {
         justify-content: center;
         position: relative;
         width: 500px;
-        // height: 400px;
-        padding: 30px 80px 40px;
+        padding: 30px 80px;
         background: radial-gradient(circle, rgba(57, 57, 57, 1) 0%, rgba(32, 32, 32, 1) 90%);
         box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
         border-radius: 10px;
@@ -68,12 +66,7 @@ body {
             margin: 10px 10px 15px;
 
             button {
-                background-color: rgba(var(--theme-color), 0);
-                border: solid rgba(var(--theme-color), 1) 1px;
-                padding: 7px 10px 5px;
-                transition: .3s;
-                color: rgb(250, 250, 250);
-                border-radius: 4px;
+
 
                 &.control {
                     width: 23%;
@@ -88,9 +81,7 @@ body {
                     // }
                 }
 
-                &:focus {
-                    outline: none;
-                }
+
 
                 &.archive {
                     width: 100%;
@@ -100,9 +91,7 @@ body {
                     line-height: 150%;
                 }
 
-                &:hover {
-                    background-color: rgba(var(--theme-color), 1);
-                }
+
             }
         }
 
@@ -163,5 +152,22 @@ body {
                 }
             }
         }
+    }
+}
+
+button {
+    background-color: rgba(var(--theme-color), 0);
+    border: solid rgba(var(--theme-color), 1) 1px;
+    padding: 7px 10px 5px;
+    transition: .3s;
+    color: rgb(250, 250, 250);
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: rgba(var(--theme-color), 1);
     }
 }
