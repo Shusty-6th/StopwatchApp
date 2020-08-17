@@ -1,0 +1,167 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-color: rgb(70, 69, 69);
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 500px;
+        // height: 400px;
+        padding: 30px 80px 40px;
+        background: radial-gradient(circle, rgba(57, 57, 57, 1) 0%, rgba(32, 32, 32, 1) 90%);
+        box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 10px;
+
+        h1 {
+            text-align: center;
+
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h2.timer {
+            margin: 10px 0 10px;
+            width: auto;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 300;
+
+            color: rgba(var(--theme-color), 1);
+        }
+
+        h3.last-time {
+            font-weight: 400;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px 5px 10px 10px;
+
+            i.im {
+                margin: 0 5px;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: rgba(var(--theme-color), 1);
+                }
+            }
+        }
+
+        div.timer-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 10px 10px 15px;
+
+            button {
+                background-color: rgba(var(--theme-color), 0);
+                border: solid rgba(var(--theme-color), 1) 1px;
+                padding: 7px 10px 5px;
+                transition: .3s;
+                color: rgb(250, 250, 250);
+                border-radius: 4px;
+
+                &.control {
+                    width: 23%;
+                    line-height: 100%;
+
+                    i {
+                        font-size: 1.2rem;
+                    }
+
+                    // &:nth-of-type(-n+3) {
+                    //      margin-left: 10px;
+                    // }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &.archive {
+                    width: 100%;
+                    margin-top: 9px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    line-height: 150%;
+                }
+
+                &:hover {
+                    background-color: rgba(var(--theme-color), 1);
+                }
+            }
+        }
+
+        section.theme-color {
+            position: absolute;
+            display: flex;
+            flex-flow: column nowrap;
+            top: 20%;
+            right: 10px;
+
+            button.color {
+                width: 25px;
+                height: 25px;
+                box-shadow: 0 0 5px 0;
+                border-radius: 100%;
+                border: none;
+                border: 1px solid rgb(43, 43, 43);
+                margin-bottom: 15px;
+                background-color: rgb(255, 100, 0);
+                color: rgb(255, 100, 0);
+                transition: .2s;
+
+                &.blue {
+                    background-color: rgb(0, 110, 255);
+                    color: rgb(0, 110, 255);
+                }
+
+                &.green {
+                    background-color: rgb(43, 255, 0);
+                    color: rgb(43, 255, 0);
+                }
+
+                &:hover {
+                    box-shadow: 0 0 8px 2px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        section.archive-results {
+            display: flex;
+            flex-direction: column;
+            display: none;
+
+            div.result {
+                display: flex;
+                justify-content: space-around;
+
+                span {
+                    font-size: 0.8rem;
+
+                    &.time {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

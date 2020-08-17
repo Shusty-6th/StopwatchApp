@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    color: rgb(250, 250, 250);
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --theme-color: 255, 100, 0;
+    --theme-color-blue: 0, 110, 255;
+}
