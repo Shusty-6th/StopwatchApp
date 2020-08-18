@@ -7,29 +7,32 @@
     <title>StopwatchApp</title>
     <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <main>
-        <nav><i class="im im-paintbrush"></i><i class="im im-question"></i></nav>
+        <nav><i class="im im-paintbrush select-theme"></i><i class="im im-question instruction"></i></nav>
         <section class="theme-color">
             <button class="color red"></button>
             <button class="color blue"></button>
             <button class="color green"></button>
         </section>
         <h1>Stopwatch</h1>
-        <h2 class="timer">0:00</h2>
-        <h3 class="last-time">&nbsp Last time: 12:09</h3>
+        <h2 class="timer">00:00:00</h2>
+        <h3 class="last-time">&nbsp
+            <!-- Last time: 12:09 -->
+        </h3>
         <div class="timer-menu">
-            <button class="control"><i class="im im-play"></i></button>
-            <button class="control"><i class="im im-pause"></i></button>
-            <button class="control"><i class="im im-stop"></i></button>
-            <button class="control"><i class="im im-x-mark"></i></button>
+            <button class="control play"><i class="im im-play"></i></button>
+            <button class="control pause"><i class="im im-pause"></i></button>
+            <button class="control stop"><i class="im im-stop"></i></button>
+            <button class="control delete"><i class="im im-x-mark"></i></button>
             <button class="archive">Archive</button>
         </div>
         <section class="archive-results">
-            <div class="result"><span class="order">Time 1:</span><span class="time">13:00</span></div>
+            <div class="result"><span class="time">No history results</span></div>
         </section>
     </main>
     <div class="hide-layer"></div>
@@ -42,12 +45,12 @@
             <li><i class="im im-x-mark"></i> - delete all results from archive</li>
             <li><span>archive</span> - contains the latest results</li>
         </ul>
-        <button>Close</button>
+        <button class="close">Close</button>
     </aside>
 
-    <script>
+    <script src="scripts/Stopwatch.js"></script>
+    <script src="scripts/script.js"></script>
 
-    </script>
 </body>
 
 </html>

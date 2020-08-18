@@ -1,20 +1,23 @@
 aside.info {
-    display: none;
+    display: flex;
+    visibility: hidden;
     flex-direction: column;
     position: absolute;
     top: 50%;
     left: 50%;
+    opacity: 0;
     background-color: rgb(34, 34, 34);
 
     width: 320px;
     padding: 15px 25px;
-
+    transition: .5s;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.75), inset 0px 0px 1px 1px rgba(var(--theme-color), 1);
 
     &.active {
-        display: flex;
+        visibility: visible;
+        opacity: 1;
     }
 
     h1 {
@@ -49,15 +52,18 @@ aside.info {
 }
 
 div.hide-layer {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.73);
+    transition: .5s;
 
     &.active {
-        display: block;
+        visibility: visible;
+        opacity: 1;
     }
 }
