@@ -95,15 +95,19 @@ class Stopwatch {
 
     stopTimer() {
         if (this.state != Stopwatch.states.STOPPED) {
-            this.state = Stopwatch.states.STOPPED;
             clearInterval(this.intervalTimer);
             clearInterval(this.pauseTimerInterval);
-            const time = this.calculateTime();
+            this.totalPausedTime += this.currentPausedTime;
+
+            const time = this.state == Stopwatch.states.PAUSED ? this.timeUi.textContent : this.calculateTime();
             this.lastTimeUi.textContent = `Last time: ${time}`;
+
             this.totalPausedTime = this.currentPausedTime = 0;
             this.pausedTimeStart = 0;
+
             this.timeUi.textContent = '00:00:00';
 
+            this.state = Stopwatch.states.STOPPED;
             this.historyResults.push(time);
             this.fillArchiveUi();
         }
